@@ -1,0 +1,56 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+.App { 
+  background-color: green;
+  height: 100vh;
+  width: 100%;
+}
+.calc {
+  display: grid; 
+  justify-content: center; 
+  align-content: center;
+  min-height: 80vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(80px, auto) repeat(5, 80px);
+}
+.calc > button {
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: greenyellow;
+  margin: 3px;
+}
+.calc > button:hover {
+  background-color: white;
+}
+.c {
+  grid-column: span 2;
+}
+.b {
+  grid-row: span 2;
+}
+.output {
+  grid-column: 1 / -1;
+  margin-bottom: .5rem;
+  background-color:#bdb76b;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .prev {
+  color: black;
+  font-size: 1.5rem;
+}
+.output .ant {
+  color:	#000080;
+  font-size: 2.5rem;
+}
